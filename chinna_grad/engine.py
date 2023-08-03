@@ -1,10 +1,11 @@
 import math
+
 # Defining the Node Class that stores a value
 class Node:
-    nameLetterVal = 65  # Stores ASCII Value of name for new Node
+    nameLetterVal = 1  # Stores value of name for new Node
     def __init__(self, data = 0.0, name = None, _children = (), _op = None):
-        name = chr(Node.nameLetterVal)
-        Node.nameLetterVal += 1                 # Update Name
+        name = "N" + str(Node.nameLetterVal)      
+        Node.nameLetterVal += 1          # Update Name
         self.name = name
         self.data = data
         self._backward = lambda : None
